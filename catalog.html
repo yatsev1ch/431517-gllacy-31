@@ -8,42 +8,48 @@
     <header>
       <nav>
         <a href="index.html"><img src="img/Лого.svg" width="154" height="64" alt="логотип сайта"></a>
-        <div>
-          <a href="#">Каталог</a>
-            <ul> 
+        <ul>
+          <li>
+            <a href="#">Каталог</a>
+            <ul>
               <li><a href="#">Новинки</a></li>
               <li><a href="">Сливочное</a></li>
               <li><a href="#">Щербеты</a></li>
               <li><a href="#">Фруктовый лёд</a></li>
               <li><a href="#">Мелорин</a></li>
             </ul>
-          <a href="#">Доставка и оплата</a>
-          <a href="#">О компании</a>
-        </div>
+          </li>
+          <li><a href="#">Доставка и оплата</a></li>
+          <li><a href="#">О компании</a></li>
+        </ul>
       </nav>
-      <ul>
-        <li><button type="button">Поиск</button></li>
-        <li><button type="button">Вход</button></li>
-        <li><button type="button">Корзина</button></li>
-      </ul>
-      <!-- Попап входа -->
-      <section>
-        <h2>Вход</h2>
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <label>Email:<input type="email" placeholder="email@example.com" name="login-email"></label>
-          <label>Пароль:<input type="password" placeholder="•••••" name="login-password"></label>
-          <button type="submit">Войти</button>
-        </form>
-        <a href="#">Забыли пароль?</a>
-        <a href="#">Новая регистрация</a>
-      </section>
-      <!-- Попап поиска -->
-      <section>
-        <h2>Поиск</h2>
-        <form action="https://echo.htmlacademy.ru" method="GET">
-          <label>Поиск:<input type="search" name="search-field" placeholder="Крем-брюле"></label>
-        </form>
-      </section>
+      <div>
+        <button type="button">Поиск</button>
+        <!-- Попап поиска -->
+        <section>
+          <h2>Поиск</h2>
+          <form action="https://echo.htmlacademy.ru" method="GET">
+             <label for="search-input">Поиск:</label>
+             <input type="search" name="search-field" id="search-input" placeholder="Крем-брюле">
+             <button type="submit">Поиск</button>
+         </form>
+        </section>
+        <button type="button">Вход</button>
+        <!-- Попап входа -->
+        <section>
+           <h2>Вход</h2>
+           <form action="https://echo.htmlacademy.ru" method="post">
+             <label for="login-email-input">Email:</label>
+             <input type="email" placeholder="email@example.com" name="login-email" id="login-email-input">
+             <label for="login-password-input">Пароль:</label>
+             <input type="password" placeholder="•••••" name="login-password" id="login-password-input">
+             <button type="submit">Войти</button>
+           </form>
+           <a href="#">Забыли пароль?</a>
+           <a href="#">Новая регистрация</a>
+       </section>
+       <button type="button">Корзина</button>
+      </div>
       <p>с 10 до 20 ежедневно <br> 
         <a href="tel:+78124502525">8 812 450-25-25</a>
       </p>
