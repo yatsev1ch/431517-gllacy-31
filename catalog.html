@@ -7,39 +7,67 @@
   <body>
     <header>
       <nav>
-        <a href="index.html"><img src="img/Лого.svg" width="154px" height="64px" alt="логотип сайта"></a>
-        <ul>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="#delivery">Доставка и оплата</a></li>
-          <li><a href="#about">О компании</a></li>
-        </ul>
-        <ul>
-          <li><button type="button">Поиск</button></li>
-          <li><button type="button">Вход</button></li>
-          <li><button type="button">Корзина</button></li>
-        </ul>
+        <a href="index.html"><img src="img/Лого.svg" width="154" height="64" alt="логотип сайта"></a>
+        <div>
+          <a href="#">Каталог</a>
+            <ul> 
+              <li><a href="#">Новинки</a></li>
+              <li><a href="">Сливочное</a></li>
+              <li><a href="#">Щербеты</a></li>
+              <li><a href="#">Фруктовый лёд</a></li>
+              <li><a href="#">Мелорин</a></li>
+            </ul>
+          <a href="#">Доставка и оплата</a>
+          <a href="#">О компании</a>
+        </div>
       </nav>
+      <ul>
+        <li><button type="button">Поиск</button></li>
+        <li><button type="button">Вход</button></li>
+        <li><button type="button">Корзина</button></li>
+      </ul>
+      <!-- Попап входа -->
+      <section>
+        <h2>Вход</h2>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <label>Email:<input type="email" placeholder="email@example.com" name="login-email"></label>
+          <label>Пароль:<input type="password" placeholder="•••••" name="login-password"></label>
+          <button type="submit">Войти</button>
+        </form>
+        <a href="#">Забыли пароль?</a>
+        <a href="#">Новая регистрация</a>
+      </section>
+      <!-- Попап поиска -->
+      <section>
+        <h2>Поиск</h2>
+        <form action="https://echo.htmlacademy.ru" method="GET">
+          <label>Поиск:<input type="search" name="search-field" placeholder="Крем-брюле"></label>
+        </form>
+      </section>
+      <p>с 10 до 20 ежедневно <br> 
+        <a href="tel:+78124502525">8 812 450-25-25</a>
+      </p>
     </header>
     <main>
       <p>Тут будет Каталог</p>
     </main>
     <footer>
-      <section>
+      <div>
         <h2>Наши социальные сети</h2>
-        <p><a href="https://facebook.com">Facebook</a></p>
-        <p><a href="https://vk.com">Вконтакте</a></p>
-        <p><a href="https://instagram.com">Instagram</a></p>
-        <p><a href="https://twitter.com">Twitter</a></p>
-      </section>
-      <section>
+        <a href="https://facebook.com">Facebook</a>
+        <a href="https://vk.com">Вконтакте</a>
+        <a href="https://instagram.com">Instagram</a>
+        <a href="https://twitter.com">Twitter</a>
+      </div>
+      <div>
         <h2>Полезные ссылки</h2>
-        <p><a href="#">Для поставщиков</a></p>
-        <p><a href="#">Наши документы</a></p>
-        <p><a href="#production">О производстве</a></p>
-        <p><a href="#">Экологические стандарты</a></p>
-      </section>
-      <p><img src="https://via.placeholder.com/75x75" width="75px" height="75px" alt="html-academy-logo"></p>
-      <p><a href="https://htmlacademy.ru/intensive/htmlcss">Сделано в HTML Academy © 2021</a></p>
+        <a href="#">Для поставщиков</a>
+        <a href="#">Наши документы</a>
+        <a href="#">О производстве</a>
+        <a href="#">Экологические стандарты</a>
+      </div>
+      <img src="https://via.placeholder.com/75x75" width="75" height="75" alt="html-academy-logo">
+      <a href="https://htmlacademy.ru/intensive/htmlcss">Сделано в HTML Academy © 2021</a>
     </footer>
   </body>
 </html>
