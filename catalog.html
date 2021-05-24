@@ -54,25 +54,24 @@
          <h2>Cодержимое корзины</h2>
          <table>
            <tr>
+              <td><button type="button">Удалить</button></td>
               <td><img src="https://via.placeholder.com/40x40" alt="Пломбир с апельсиновым джемом" width="40" height="40"></td>
               <td><p>Пломбир с апельсиновым джемом</p></td>
               <td><p>1,5кг х <span>200руб.</span></p></td>
               <td>300 руб.</td>
            </tr>
            <tr>
+              <td><button type="button">Удалить</button></td>
               <td><img src="https://via.placeholder.com/40x40" alt="Пломбир с апельсиновым джемом" width="40" height="40"></td>
               <td><p>Пломбир с апельсиновым джемом</p></td>
               <td><p>1,5кг х <span>300руб.</span></p></td>
               <td>450 руб.</td>
           </tr>
            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><p>Итого: 750 руб.</p></td>
+              <td colspan="5"><p>Итого: 750 руб.</p></td>
            </tr>
          </table>
-         <button type="button">Оформить заказ</button>
+         <a href="#">Оформить заказ</a>
        </section>
       </div>
       <p>с 10 до 20 ежедневно <br> 
@@ -89,23 +88,21 @@
       <section>
         <h2>Поиск по фильтрам</h2>
         <form action="https://echo.htmlacademy.ru" method="GET">
-        <fieldset>
-          <legend>Сортировка:</legend>
+        <div>
+          <label for="filters-sorting-field">Сортировка:</label>
           <select name="sorting" id="filters-sorting-field">
             <option value="popularity" selected>По популярности</option>
             <option value="cheaper-first">Сначала недорогие</option>
             <option value="expensive-first">Сначала дорогие</option>
             <option value="content-of-a-fat">По жирности</option>
           </select>
-        </fieldset>
+        </div>
         <fieldset>
           <legend>Цена: 100₽ - 500₽</legend>
-          <!-- Я так понял, для создания двойного слайдера берут 2 обычных range-слайдера и потом объединяют их с помощью js. 
-            Поэтому просто вставил 2 с разными id 
-          -->
           <input type="range" name="price-range-min" id="min-price-range-field" min="0" max="1000" step="100" value="100">
           <input type="range" name="price-range-max" id="max-price-range-field" min="0" max="1000" step="100" value="500">
         </fieldset>
+
         <fieldset>
           <legend>Жирность</legend>
           <ul>
@@ -127,18 +124,31 @@
             </li>
           </ul>
         </fieldset>
+            
         <fieldset>
           <legend>Наполнители</legend>
-          <input type="checkbox" name="with-chocolate" id="with-chocolate-checkbox" checked>
-          <label for="with-chocolate-checkbox">шоколадные</label>
-          <input type="checkbox" name="with-shugar" id="with-shugar-checkbox" checked>
-          <label for="with-shugar-checkbox">сахарные присыпки</label>
-          <input type="checkbox" name="with-fruits" id="with-fruits-checkbox">
-          <label for="with-fruits-checkbox">фрукты</label>
-          <input type="checkbox" name="with-syrope" id="with-syrope-checkbox">
-          <label for="with-syrope-checkbox">сиропы</label>
-          <input type="checkbox" name="with-jam" id="with-jam-checkbox">
-          <label for="with-jam-checkbox">джемы</label>
+          <ul>
+            <li>
+              <input type="checkbox" name="with-chocolate" id="with-chocolate-checkbox" checked>
+              <label for="with-chocolate-checkbox">шоколадные</label>
+            </li>
+            <li>
+              <input type="checkbox" name="with-shugar" id="with-shugar-checkbox" checked>
+              <label for="with-shugar-checkbox">сахарные присыпки</label>
+            </li>
+            <li>
+              <input type="checkbox" name="with-fruits" id="with-fruits-checkbox">
+              <label for="with-fruits-checkbox">фрукты</label>
+            </li>
+            <li>
+              <input type="checkbox" name="with-syrope" id="with-syrope-checkbox">
+              <label for="with-syrope-checkbox">сиропы</label>
+            </li>
+            <li>
+              <input type="checkbox" name="with-jam" id="with-jam-checkbox">
+              <label for="with-jam-checkbox">джемы</label>
+            </li>
+          </ul>
         </fieldset>
         <button type="submit">Применить</button>
       </form>
@@ -147,98 +157,74 @@
           <h2>Список сливочного мороженого</h2>
           <ul>
             <li>
-              <a href="">
-                <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-                <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-              </a>
+              <a href=""><h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3></a>
+              <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
               <p>310₽<span>/кг</span></p>
               <a href="orange.html">Быстрый просмотр</a>
             </li>
             <li>
-              <a href="">
-                <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Сливочно-кофейное с кусочками шоколада">
-                <h3>Сливочно-кофейное с кусочками шоколада</h3>
-              </a>
+              <a href=""><h3>Сливочно-кофейное с кусочками шоколада</h3></a>
+              <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Сливочно-кофейное с кусочками шоколада">
               <p>380₽<span>/кг</span></p>
               <a href="cream-cofee.html">Быстрый просмотр</a>
             </li>
             <li>
-              <a href="">
-                <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-                <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
-              </a>
+              <a href=""><h3>Сливочно-клубничное с присыпкой из белого шоколада</h3></a>
+              <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Сливочно-клубничное с присыпкой из белого шоколада">
               <p>355₽<span>/кг</span></p>
               <a href="cream-strawberry.html">Быстрый просмотр</a>
             </li>
             <li>
-              <a href="">
-                <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Сливочное крем-брюле с карамельной подливкой">
-                <h3>Сливочное крем-брюле с карамельной подливкой</h3>
-              </a>
+              <a href=""><h3>Сливочное крем-брюле с карамельной подливкой</h3></a>
+              <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Сливочное крем-брюле с карамельной подливкой">
               <p>415₽<span>/кг</span></p>
               <a href="creme-brulee.html">Быстрый просмотр</a>
             </li>
             <li>
-              <a href="">
-                <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Сливочное с брусничным джемом">
-                <h3>Сливочное с брусничным джемом</h3>
-              </a>
+              <a href=""><h3>Сливочное с брусничным джемом</h3></a>
+              <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Сливочное с брусничным джемом">
               <p>325₽<span>/кг</span></p>
               <a href="cream-lingonberry.html">Быстрый просмотр</a>
             </li>
             <li>
-              <a href="">
-                <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Сливочно-черничное с цельными ягодами черники">
-                <h3>Сливочно-черничное с цельными ягодами черники</h3>
-              </a>
+              <a href=""><h3>Сливочно-черничное с цельными ягодами черники</h3></a>
+              <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Сливочно-черничное с цельными ягодами черники">
               <p>410₽<span>/кг</span></p>
               <a href="cream-blueberry.html">Быстрый просмотр</a>
             </li>
             <li>
-              <a href="">
-                <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Сливочно-лимонное с карамельной присыпкой">
-                <h3>Сливочно-лимонное с карамельной присыпкой</h3>
-              </a>
+              <a href=""><h3>Сливочно-лимонное с карамельной присыпкой</h3></a>
+              <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Сливочно-лимонное с карамельной присыпкой">
               <p>315₽<span>/кг</span></p>
               <a href="cream-lemon.html">Быстрый просмотр</a>
             </li>
             <li>
-              <a href="">
-                <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Сливочное с шоколадной стружкой">
-                <h3>Сливочное с шоколадной стружкой</h3>
-              </a>
+              <a href=""><h3>Сливочное с шоколадной стружкой</h3></a>
+              <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Сливочное с шоколадной стружкой">
               <p>320₽<span>/кг</span></p>
               <a href="cream-chocolate.html">Быстрый просмотр</a>
             </li>
             <li>
-              <a href="">
-                <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Сливочно-ванильное с кусочками шоколада">
-                <h3>Сливочно-ванильное с кусочками шоколада</h3>
-              </a>
+              <a href=""><h3>Сливочно-ванильное с кусочками шоколада</h3></a>
+              <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Сливочно-ванильное с кусочками шоколада">
               <p>440₽<span>/кг</span></p>
               <a href="cream-vanilla.html">Быстрый просмотр</a>
             </li>
             <li>
-              <a href="">
-                <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Сливочноe с ментоловым сиропом">
-                <h3>Сливочноe с ментоловым сиропом</h3>
-              </a>
+              <a href=""><h3>Сливочноe с ментоловым сиропом</h3></a>
+              <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Сливочноe с ментоловым сиропом">
               <p>435₽<span>/кг</span></p>
               <a href="cream-menthol.html">Быстрый просмотр</a>
             </li>
             <li>
-              <a href="">
-                <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Сливочное с кусочками черного шоколада">
-                <h3>Сливочное с кусочками черного шоколада</h3>
-              </a>
+              <a href=""><h3>Сливочное с кусочками черного шоколада</h3></a>
+              <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Сливочное с кусочками черного шоколада">
               <p>355₽<span>/кг</span></p>
               <a href="cream-black-chocolate.html">Быстрый просмотр</a>
             </li>
             <li>
-              <a href="#">
-                <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Сливочное с мятным сиропом">
-                <h3>Сливочное с мятным сиропом</h3>
-              </a>
+              <a href="#"><h3>Сливочное с мятным сиропом</h3></a>
+              <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Сливочное с мятным сиропом">
               <p>420₽<span>/кг</span></p>
               <a href="cream-mint.html">Быстрый просмотр</a>
             </li>
