@@ -2,28 +2,28 @@
     font-family: "Roboto";
     font-weight: 400;
     font-style: normal;
-    src: url(../fonts/roboto.woff);
-    src: url(../fonts/roboto.woff2);
+    font-display: swap;
+    src: url(../fonts/roboto.woff), url(../fonts/roboto.woff2);
 }
 
 @font-face {
     font-family: "Roboto";
     font-weight: 500;
     font-style: normal;
-    src: url(../fonts/robotomedium.woff);
-    src: url(../fonts/robotomedium.woff2);
+    font-display: swap;
+    src: url(../fonts/robotomedium.woff), url(../fonts/robotomedium.woff2);
 }
 
 @font-face {
     font-family: "Roboto";
     font-weight: 700;
     font-style: normal;
-    src: url(../fonts/robotobold.woff);
-    src: url(../fonts/robotobold.woff2);
+    font-display: swap;
+    src: url(../fonts/robotobold.woff), url(../fonts/robotobold.woff2);
 }
 
 
-
+/* Переменные */
 :root {
     --main-background-1: #9D8B84;
     --main-background-2: #8996A6; 
@@ -49,26 +49,34 @@
     --orange-active: #F6B5A5;
     --gray-stroke: #B2B2B2;
     --gray-basic: #5A5A5A;
+    --gray-placeholder: #999999;
     --blue-focus: rgba(46,136,228,0.52);
     --raspberry: rgb(162, 24, 61);
     --chocolate: rgb(79, 43, 22);
 }
 
+/* Основные */
 .page-body {
     background-color: var(--main-background-1);
     min-width: 960px;
-    margin: 0px;
-    padding: 0px;
+    font-size: 16px;
+    color: var(--black-basic);
+    line-height: 22px;
+    margin: 0;
+    padding: 0;
     font-family: "Roboto", Arial, sans-serif;
-    /* line-height: 22px;
-    font-size: 16px; */
 }
 
-.page-body a {
-    text-decoration: none;
-    color: inherit;
+.page-body img {
+    max-width: 100%;
+    height: auto;
 }
 
+.page-body ul {
+    list-style: none;
+}
+
+/* Тёмные ссылки */
 .page-body .dark-link {
     color: var(--black-basic);
     text-decoration: underline;
@@ -82,6 +90,7 @@
     text-decoration-color: var(--orange-link-dark-opacity);
 }
 
+/* Светлые ссылки */
 .page-body .light-link {
     color: var(--white-basic);
     text-decoration: underline;
@@ -95,124 +104,37 @@
     text-decoration-color: var(--orange-link-light-opacity);
 }
 
-.page-body img {
-    max-width: 100%;
-    height: auto;
-}
-
-.page-body ul {
-    list-style: none;
-}
-
-
-.main-menu-item>a {
-    font-size: 16px;
-    line-height: 18px;
-    font-weight: bold;
-    color: var(--white-basic);
-    text-decoration: underline ;
-    text-decoration-color: var(--white-opacity);
-}
-
-
-
-
-
-.main-menu-item:hover>a, 
-.main-menu-item:focus>a  {
-    background-color: var(--white-basic);
-    color: var(--black-basic);
-    text-decoration: none;
-}
-
-.main-menu-item:active>a {
-    background-color: var(--white-active);
-    color: var(--black-basic);
-    text-decoration: none;
-}
-
-.main-menu-item>a[href=""] {
-    background-color: var(--orange-basic);
-    color: var(--white-basic);
-    text-decoration: none;
-}
-
-
-.submenu {
-    background-color: var(--white-basic);
-    font-weight: normal;
-    text-decoration: none;
-}
-
-.submenu a {
-    color: var(--black-basic);
-    font-size: 14px;
-    line-height: 16px;
-}
-
-.bolded-item {
-    font: inherit;
-    line-height: 18px;
-    font-weight: bold;
-}
-
-.submenu .submenu-item:hover,
-.submenu .submenu-item:focus {
-    background-color: var(--orange-hover);
-}
-
-.submenu .submenu-item:active {
-    background-color: var(--orange-active);
-}
-
-.submenu .submenu-item>a[href=""] {
-    background-color: var(--orange-basic);
-    color: var(--white-basic);
-}
-
-
-
-.user-button {
-    height: 32px;
+/* Кнопки */
+.page-body .button {
+    background-color: var(--orange-button);
     border: none;
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: 500;
-    background-color: var(--white-opacity);
     color: var(--white-basic);
-}
-
-.user-button:hover, .user-button:focus {
-    color: var(--black-basic);
-    background-color: var(--white-basic);
-}
-
-
-
-.main-header p {
-    color: var(--white-basic);
+    text-decoration: none;
     font-weight: bold;
-    font-size: 14px;
-    line-height: 16px;
 }
 
-.header-phone {
-    font-size: 22px;
-    line-height: 24px;
-    
+.page-body .button:hover,
+.page-body .button:focus {
+    background-color: var(--orange-button-hover);
 }
 
-.popup {
-    background-color: var(--white-popup);
+.page-body .button:active {
+    background-color: var(--orange-button-active);
 }
 
-
-.general-form input {
+/* Поля формы */
+.general-form input, 
+.general-form {
     height: 44px;
-    font-family: inherit;
     border: 1px solid var(--gray-stroke);
     color: var(--black-basic);
     background-color: var(--white-basic);
+    font-weight: bold;
+}
+
+.general-form input::placeholder {
+    color: var(--gray-placeholder);
+    font-weight: normal;
 }
 
 .general-form input:hover {
@@ -223,26 +145,109 @@
     border: 2px solid var(--blue-focus);
 }
 
-.button {
-    height: 44px;
-    background-color: var(--orange-button);
+/* Попап */
+.popup {
+    background-color: var(--white-popup);
+}
+
+/* Меню */
+.main-menu-link {
+    line-height: 18px;
+    font-weight: bold;
+    color: var(--white-basic);
+    text-decoration: underline ;
+    text-decoration-color: var(--white-opacity);
+}
+
+
+
+.main-menu-item:hover .main-menu-link, 
+.main-menu-item:focus .main-menu-link {
+    background-color: var(--white-basic);
+    color: var(--black-basic);
+    text-decoration: none;
+}
+
+.main-menu-item:active .main-menu-link {
+    background-color: var(--white-active);
+    color: var(--black-basic);
+    text-decoration: none;
+}
+
+.main-menu-link[href=""] {
+    background-color: var(--orange-basic);
+    color: var(--white-basic);
+    text-decoration: none;
+}
+
+.submenu {
+    background-color: var(--white-basic);
+    font-weight: normal;
+    text-decoration: none;
+}
+
+
+.submenu-item:hover,
+.submenu-item:focus {
+    background-color: var(--orange-hover);
+}
+
+.submenu-item:active {
+    background-color: var(--orange-active);
+}
+
+.submenu-link {
+    color: var(--black-basic);
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.submenu-link[href=""] {
+    background-color: var(--orange-basic);
+    color: var(--white-basic);
+}
+
+.submenu-bolded-item .submenu-link {
+    line-height: 18px;
+    font-weight: bold;
+}
+
+/* Кнопки пользователя */
+.user-button {
     border: none;
-    color: var(--white-basic)
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    background-color: var(--white-opacity);
+    color: var(--white-basic);
 }
 
-.button:hover, button:focus {
-    background-color: var(--orange-button-hover);
+.user-button:hover, 
+.user-button:focus {
+    color: var(--black-basic);
+    background-color: var(--white-basic);
 }
 
-.button:active {
-    background-color: var(--orange-button-active);
+/* Телефон и рабочие часы */
+.header-working-hours {
+    color: var(--white-basic);
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
 }
 
+.header-phone {
+    color: inherit;
+    font-size: 22px;
+    line-height: 24px;
+    text-decoration: none;
+}
 
-.login-popup .login-button {
+/* Попап входа */
+.login-popup-button {
     font-size: 18px;
     line-height: 16px;
-    font-weight: bold;
 }
 
 .login-popup .dark-link {
@@ -250,46 +255,43 @@
     line-height: 15px;
 }
 
-.offers h3 {
+/* Предложения */
+.offer-item-header {
     font-size: 60px;
     line-height: 60px;
     color: var(--white-basic);
     font-weight: bold;
 }
 
-.offer-item .offer-button {
-    color: var(--white-basic);
+.offer-item-button {
     font-size: 32px;
     line-height: 44px;
-    font-weight: bold;
 }
 
-.promo-item h3 {
+/* Промо */
+.promo-item-header {
     color: var(--white-basic);
     font-size: 35px;
     line-height: 41px;
     font-weight: bold;
 }
 
-.promo-item p {
+.promo-item-description {
     color: var(--white-basic);
     font-size: 18px;
     line-height: 22px;
     font-weight: bold;
 }
 
-.promo-item .promo-button {
-    color: var(--white-basic);
+.promo-item-button {
     font-size: 18px;
     line-height: 24px;
-    font-weight: bold;
 }
 
 .promo-item:first-child {   
     background-color: var(--raspberry);
     background-repeat: no-repeat;
     background-image: url(../img/raspberry-background.png);
-
 }
 
 .promo-item:last-child {
@@ -298,20 +300,20 @@
     background-image: url(../img/chocolate-background.png);
 }
 
-.product-price {
+/* Товары */
+.product-item-price {
     font-size: 45px;
     line-height: 45px;
     font-weight: bold;
     color: var(--white-basic);
 }
 
-.product-price span {
+.product-item-price span {
     font-size: 30px;
     line-height: 35px;
-
 }
 
-.product-item h3 {
+.product-item-header {
     font-size: 16px;
     line-height: 22px;
 }
@@ -326,16 +328,14 @@
     background-repeat: no-repeat;
 }
 
-.product-item .product-button {
-    color: var(--white-basic);
+.product-item-button {
     font-size: 18px;
     line-height: 24px;
-    font-weight: bold;
 }
 
+/* О магазине */
 .about {
     background-image: url(../img/waffle-pattern.png);
-    background-position: 0px 0px;
     background-repeat: repeat;
 }
 
@@ -343,25 +343,15 @@
     font-size: 24px;
     line-height: 30px;
     font-weight: 500;
-    color: var(--black-basic);
 }
 
-.about-item-description {
-    font-size: 16px;
-    line-height: 22px;
-    color: var(--black-basic);
-}
-
-
-
-
+/* Запись блога */
 .blog-post {
     background-image: url(../img/strawberry-background.png);
     background-repeat: no-repeat;
-    background-position: 0px 0px;
 }
 
-.blog-post h2 {
+.blog-post-header {
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
@@ -376,9 +366,9 @@
 
 }
 
+/* Подписка */
 .subscribtion {
     background-image: url(../img/mail-background.png);
-    background-position: 0px 0px;
     background-repeat: no-repeat;
     padding: 5px;
 }
@@ -387,72 +377,60 @@
     background-color: var(--white-popup);
 }
 
-.subscribtion-container p {
-    color: var(--gray-basic);
-    font-size: 16px;
-    line-height: 22px;
-}
-
 .subscribtion-button {
     font-size: 18px;
     line-height: 24px;
-    font-weight: bold;
 }
 
-.location .info-container {
+/* Местоположение */
+.location-info {
     background-color: var(--white-info);
 }
 
-.location p {
+.location-info-label {
     font-size: 14px;
     line-height: 20px;
-    color: var(--black-basic);
 }
 
-.location .adress, .location .location-phone {
+.location-info-adress,
+.location-info-phone {
     font-size: 18px;
     line-height: 24px;
     font-weight: bold;
+    color: var(--black-basic);
+    text-decoration: none;
 }
 
-.location .location-button {
-    color: var(--white-basic);
+.location-info-button {
     font-size: 18px;
     line-height: 24px;
-    font-weight: bold;
 }
 
-.feedback-popup h2 {
-    color: var(--black-basic);
+/* Обратная связь */
+.feedback-popup-header {
     font-size: 24px;
     line-height: 28px;
     font-weight: 500;
-
 }
 
-.feedback-popup textarea {
-    color: gray;
-}
-
-.feedback-popup .feedback-button {
+.feedback-popup-button {
     font-size: 18px;
     line-height: 24px;
-    font-weight: bold;
 }
 
 .feedback-popup .close-button  {
     height: 17px;
     width: 18px;
     background-image: url(../img/icons/popup-close-icon.svg);
-    background-position: 0px 0px;
+    background-position: 0 0;
     background-repeat: no-repeat;
     background-color: transparent;
     color: transparent;
     border: none;
 }
 
-
-.footer-logo-container {
+/* Подвал */
+.footer-credentials {
     color: var(--white-basic);
 }
 
