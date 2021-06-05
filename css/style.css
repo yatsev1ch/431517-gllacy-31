@@ -123,12 +123,15 @@
 }
 
 /* Поля формы */
-.general-form input, 
-.general-form {
+.general-form input {
     height: 44px;
     border: 1px solid var(--gray-stroke);
     color: var(--black-basic);
     background-color: var(--white-basic);
+    font-weight: bold;
+}
+
+.general-form textarea {
     font-weight: bold;
 }
 
