@@ -135,7 +135,8 @@
     font-weight: bold;
 }
 
-.general-form input::placeholder {
+.general-form input::placeholder,
+.general-form textarea::placeholder {
     color: var(--gray-placeholder);
     font-weight: normal;
 }
