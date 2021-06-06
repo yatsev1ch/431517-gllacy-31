@@ -3,7 +3,7 @@
     font-weight: 400;
     font-style: normal;
     font-display: swap;
-    src: url(../fonts/roboto.woff), url(../fonts/roboto.woff2);
+    src: url(../fonts/roboto.woff2), url(../fonts/roboto.woff);
 }
 
 @font-face {
@@ -11,7 +11,7 @@
     font-weight: 500;
     font-style: normal;
     font-display: swap;
-    src: url(../fonts/robotomedium.woff), url(../fonts/robotomedium.woff2);
+    src: url(../fonts/robotomedium.woff2), url(../fonts/robotomedium.woff);
 }
 
 @font-face {
@@ -19,7 +19,7 @@
     font-weight: 700;
     font-style: normal;
     font-display: swap;
-    src: url(../fonts/robotobold.woff), url(../fonts/robotobold.woff2);
+    src: url(../fonts/robotobold.woff2), url(../fonts/robotobold.woff);
 }
 
 
@@ -31,6 +31,7 @@
     --black-basic: #323232; 
     --black-stroke: rgba(50, 50, 50, 0.3);
     --black-stroke-dark: #353535;
+    --black-classic: black;
     --white-basic: #FFFFFF;
     --white-active: #EDEDED;
     --white-popup: #F8F7F4;
@@ -50,6 +51,7 @@
     --gray-stroke: #B2B2B2;
     --gray-basic: #5A5A5A;
     --gray-placeholder: #999999;
+    --gray-cart-item-price: #ABABAB;
     --blue-focus: rgba(46,136,228,0.52);
     --raspberry: rgb(162, 24, 61);
     --chocolate: rgb(79, 43, 22);
@@ -58,9 +60,10 @@
 /* Основные */
 .page-body {
     background-color: var(--main-background-1);
+    color: var(--black-basic);
     min-width: 960px;
     font-size: 16px;
-    color: var(--black-basic);
+    font-weight: normal;
     line-height: 22px;
     margin: 0;
     padding: 0;
@@ -90,6 +93,7 @@
     text-decoration-color: var(--orange-link-dark-opacity);
 }
 
+
 /* Светлые ссылки */
 .page-body .light-link {
     color: var(--white-basic);
@@ -103,6 +107,16 @@
     color: var(--orange-link-light);
     text-decoration-color: var(--orange-link-light-opacity);
 }
+
+.page-body .light-link[href=""],
+.page-body .light-link[href=""]:hover, 
+.page-body .light-link[href=""]:focus,
+.page-body .light-link[href=""]:active {
+    text-decoration: none;
+    color: var(--white-basic);
+    cursor: default;
+}
+
 
 /* Кнопки */
 .page-body .button {
@@ -165,14 +179,14 @@
 
 
 
-.main-menu-item:hover .main-menu-link, 
-.main-menu-item:focus .main-menu-link {
+.main-menu-link:hover , 
+.main-menu-link:focus {
     background-color: var(--white-basic);
     color: var(--black-basic);
     text-decoration: none;
 }
 
-.main-menu-item:active .main-menu-link {
+.main-menu-link:active {
     background-color: var(--white-active);
     color: var(--black-basic);
     text-decoration: none;
@@ -186,17 +200,16 @@
 
 .submenu {
     background-color: var(--white-basic);
-    font-weight: normal;
     text-decoration: none;
 }
 
 
-.submenu-item:hover,
-.submenu-item:focus {
+.submenu-link:hover,
+.submenu-link:focus {
     background-color: var(--orange-hover);
 }
 
-.submenu-item:active {
+.submenu-link:active {
     background-color: var(--orange-active);
 }
 
@@ -258,6 +271,40 @@
     font-size: 13px;
     line-height: 15px;
 }
+
+/* Попап корзины */
+.cart-delete-button {
+    background-color: transparent;
+    color: transparent;
+    background-image: url(../img/icons/cart-delete-icon.svg);
+    background-repeat: no-repeat;
+    border: none;
+    width: 11px;
+}
+
+.cart-product-title,
+.cart-product-price {
+    font-size: 13px;
+    line-height: 16px; 
+}
+
+.cart-product-calculation {
+    font-size: 13px;
+    line-height: 16px; 
+    color: var(--black-classic);
+}
+
+.cart-product-calculation span {
+    color: var(--gray-cart-item-price);
+}
+
+.cart-total-price {
+    font-size: 15px;
+    line-height: 16px;
+    font-weight: bold;
+}
+
+
 
 /* Предложения */
 .offer-item-header {
