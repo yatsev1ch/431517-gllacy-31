@@ -351,6 +351,58 @@
     background-image: url(../img/chocolate-background.png);
 }
 
+/* Хлебные крошки */
+
+.breadcrumbs {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+/* Фильтры */
+
+.filters {
+    color: var(--white-basic);
+    font-weight: 500;
+}
+
+.filters fieldset {
+    border: none;
+}
+
+.filters-fat-percentage-list, 
+.filters-fillers-list {
+    background-color: var(--white-opacity);
+}
+
+.filters-legend {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.filters-label {
+    line-height: 18px;
+}
+
+.filters-button {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    color: var(--white-basic);
+    background-color: var(--white-opacity);
+    border: 2px solid var(--white-basic);
+}
+
+.filters-button:hover,
+.filters-button:focus {
+    color: var(--black-basic);
+    background-color: var(--white-basic);
+}
+
+.filters-button:active {
+    color: var(--black-basic);
+    background-color: var(--white-basic);
+}
+
 /* Товары */
 .product-item-price {
     font-size: 45px;
@@ -383,6 +435,30 @@
     font-size: 18px;
     line-height: 24px;
 }
+
+/* Номер страницы */
+
+.page-number {
+    color: var(--white-basic);
+    background-color: transparent;
+    line-height: 18px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.page-number:hover,
+.page-number:focus {
+    background-color: var(--white-opacity);
+}
+
+.page-number:active,
+.page-number[href=""] {
+    color: var(--black-basic);
+    background-color: var(--white-basic);
+}
+
+
+
 
 /* О магазине */
 .about {
