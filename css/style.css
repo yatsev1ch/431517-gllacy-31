@@ -575,6 +575,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: min-content;
+    justify-items: center;
     column-gap: 26px;
     justify-items: center;
 }
@@ -584,6 +585,8 @@
     grid-template-columns: 1fr;
     grid-template-rows: min-content;
     text-align: center;
+    justify-items: center;
+
 }
 
 
@@ -625,6 +628,7 @@
     background-repeat: no-repeat;
     margin-bottom: -61px;
     z-index: 1;
+    justify-self: start;
 }
 
 .product-item-button {
