@@ -673,7 +673,6 @@
     background-image: url(../img/waffle-pattern.png);
     background-repeat: repeat;
     padding: 24px 20px;
-    border-bottom: 1px solid transparent;
     border-radius: 16px;
 }
 
@@ -887,6 +886,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: min-content;
     align-items: center;
+    padding-bottom: 26px;
 }
 
 .footer-header {
