@@ -80,8 +80,8 @@
 }
 
 .container {
-    margin: auto;
-    padding: 0 27px;
+    margin: 0px auto;
+    padding: 0px 27px;
     width: 100%;
     max-width: 1200px;
     box-sizing: border-box;
@@ -192,13 +192,16 @@
 /* Скрыто */
 
 .main-page-header,
+.filters-header,
+.products-header,
 .offers-header,
 .promo-header,
 .popular-products-header,
 .about-header,
 .subscribtion-header,
 .subscribtion-form label,
-.location-header {
+.location-header,
+.cart-header {
     position: absolute;
     width: 1px;        
     height: 1px;
@@ -224,32 +227,41 @@
     padding-top: 10px;
 }
 
-
+.main-header-logo {
+    float: left; /*Временно*/
+}
 
 
 /* Меню */
 .main-menu {
-    /* Временно сделал инлайновыми для удобства */
-    display: inline-block;
-    
+    float: left; /*Временно*/
     margin: 0;
     padding: 0;
 }
 
 .main-menu-item {
-     /* Временно сделал инлайновыми для удобства */
-    display: inline-block;
-    vertical-align: top;
+    float: left; /*Временно*/
+}
+
+.menu-item-with-submenu {
+    position: relative;
+}
+
+
+.menu-item-with-submenu:hover .submenu {
+    display: block;
 }
 
 .user-button-container {
-    display: inline-block;
+    display: block;
+    float: left; /*Временно*/
+    position: relative;
 }
 
 
 
 .main-menu-link {
-    display: inline-block;
+    display: block;
     line-height: 18px;
     font-weight: bold;
     color: var(--white-basic);
@@ -281,13 +293,51 @@
 }
 
 .submenu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: -8px;
+    z-index: 1;
+    border-radius: 4px;  
     background-color: var(--white-basic);
     text-decoration: none;
-    display: none;
-
     margin: 0;
     padding: 0;
 }
+
+.submenu::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: transparent;
+
+}
+
+
+
+
+.submenu-link {
+    display: block;
+    min-width: 120px;
+    padding: 13px 21px;
+    color: var(--black-basic);
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.submenu-item:first-child .submenu-link {
+    border-radius: 4px 4px 0px 0px;
+}
+
+.submenu-item:last-child .submenu-link {
+    border-radius: 0px 0px 4px 4px;
+}
+
 
 
 .submenu-link:hover,
@@ -299,16 +349,13 @@
     background-color: var(--orange-active);
 }
 
-.submenu-link {
-    color: var(--black-basic);
-    text-decoration: none;
-    font-size: 14px;
-    line-height: 16px;
-}
-
 .submenu-link[href=""] {
     background-color: var(--orange-basic);
     color: var(--white-basic);
+}
+
+.submenu-item:first-child {
+    border-bottom: 1px solid var(--black-stroke);
 }
 
 .submenu-bolded-item .submenu-link {
@@ -335,12 +382,15 @@
     border-radius: 20px;
 }
 
-.user-button:hover, 
+.user-button:hover,
 .user-button:focus {
     cursor: pointer;
     color: var(--black-basic);
     background-color: var(--white-basic);
 }
+
+
+
 
 /* Телефон и рабочие часы */
 .header-working-hours {
@@ -372,6 +422,38 @@
 }
 
 /* Попап корзины */
+.cart-popup-button {
+    padding: 13px 15px;
+    float: right; /*Временно*/
+    border-radius: 26px;
+}
+
+
+.cart-popup {
+    display: none;
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 0;
+    min-width: 539px;
+    padding: 21px 14px;
+    border-radius: 4px;
+}
+
+.cart-popup::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: transparent;
+}
+
+.header-cart-container:hover .cart-popup {
+    display: block;
+}
+
 .cart-delete-button {
     background-color: transparent;
     color: transparent;
@@ -529,7 +611,7 @@
 }
 
 .promo-item-button {
-    float: right; /* Временное решение */
+    float: right; /*Временно*/
     font-size: 18px;
     line-height: 24px;
     padding: 15px 22px;
@@ -542,9 +624,33 @@
 
 /* Хлебные крошки */
 
+.catalog-header {
+    margin: 0;
+    margin-bottom: 29px;
+    padding: 0;
+    font-size: 35px;
+    line-height: 41px;
+    font-weight: bold;
+    color: var(--white-basic);
+}
+
+.catalog-header-and-breadcrumbs {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
 .breadcrumbs {
     font-size: 14px;
     line-height: 16px;
+    margin: 0;
+    margin-bottom: 9px;
+    padding: 0;
+    grid-row: 1 / 2;
+}
+
+.breadcrumbs-item {
+    float: left; /*Временно*/
 }
 
 /* Фильтры */
@@ -552,10 +658,15 @@
 .filters {
     color: var(--white-basic);
     font-weight: 500;
+    margin-bottom: 40px;
 }
+
+
 
 .filters fieldset {
     border: none;
+    padding: 0;
+    margin: 0;
 }
 
 .filters-fat-percentage-list, 
@@ -573,12 +684,16 @@
 }
 
 .filters-button {
+    display: block;
     font-size: 16px;
     line-height: 18px;
     font-weight: 500;
     color: var(--white-basic);
     background-color: var(--white-opacity);
     border: 2px solid var(--white-basic);
+    cursor: pointer;
+    padding: 9px 29px 9px 29px;
+    border-radius: 20px;
 }
 
 .filters-button:hover,
@@ -597,6 +712,10 @@
     margin-bottom: 40px;
 }
 
+.catalog-products {
+    margin-bottom: 40px;
+}
+
 .product-list {
     padding: 0;
     margin: 0;
@@ -608,20 +727,26 @@
     justify-items: center;
 }
 
+.inner-product-list {
+    grid-row-gap: 40px;
+    margin-bottom: 80px;
+}
+
 .product-item {
     position: relative;
     text-align: center;
     box-sizing: border-box;
 }
 
-.product-item::before {
+.index-product-item::before {
+    display: block;
+    padding: 16px;
+    box-sizing: border-box;
     background-color: var(--white-basic);
     width: 61px;
     height: 61px;
     border-radius: 50%;
     content: url(../img/icons/hit-icon.svg);
-    font-size: 40px;
-    line-height: 61px;
     position: absolute;
     top: 0;
     left: 0;
@@ -671,6 +796,18 @@
 }
 
 /* Номер страницы */
+
+
+
+.page-numbers {
+    margin: 0;
+    padding: 0;
+}
+
+.page-number-item {
+    display: block;
+    cursor: pointer;
+}
 
 .page-number {
     color: var(--white-basic);
@@ -833,6 +970,7 @@
     border-radius: 16px;
     text-align: left;
     padding: 32px 25px;
+    margin-right: 27px;
 }
 
 .location-info-label {
