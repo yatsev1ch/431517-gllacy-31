@@ -33,11 +33,11 @@
           <button type="button" class="user-button user-search-button">Поиск</button>
           <!-- Попап поиска -->
           <section class="popup search-popup">
-            <h2>Поиск</h2>
+            <h2 class="visualy-hidden">Поиск</h2>
             <form action="https://echo.htmlacademy.ru" method="GET" class="general-form search-form">
-              <label for="search-input">Поиск:</label>
-              <input type="search" name="search-field" id="search-input" placeholder="Крем-брюле">
-              <button type="submit">Поиск</button>
+              <label for="search-input" class="visualy-hidden">Поиск:</label>
+              <input class="search-popup-input" type="search" name="search-field" id="search-input" placeholder="Крем-брюле">
+              <button type="submit" class="visualy-hidden">Поиск</button>
             </form>
           </section>
         </div>
@@ -45,40 +45,42 @@
           <button type="button" class="user-button user-login-button">Вход</button>
           <!-- Попап входа -->
           <section class="popup login-popup">
-            <h2>Вход</h2>
+            <h2 class="visualy-hidden">Вход</h2>
             <form action="https://echo.htmlacademy.ru" method="post" class="general-form login-form">
-              <label for="login-email-input">Email:</label>
-              <input type="email" placeholder="email@example.com" name="login-email" id="login-email-input">
-              <label for="login-password-input">Пароль:</label>
-              <input type="password" placeholder="•••••" name="login-password" id="login-password-input">
+              <label for="login-email-input" class="visualy-hidden">Email:</label>
+              <input class="login-popup-input" type="email" placeholder="email@example.com" name="login-email" id="login-email-input">
+              <label for="login-password-input" class="visualy-hidden">Пароль:</label>
+              <input class="login-popup-input" type="password" placeholder="•••••" name="login-password" id="login-password-input">
               <button type="submit" class="button login-popup-button">Войти</button>
             </form>
-            <a href="#" class="dark-link">Забыли пароль?</a>
-            <a href="#" class="dark-link">Новая регистрация</a>
+            <div class="login-popup-links-container">
+              <a href="#" class="dark-link forget-password-link">Забыли пароль?</a>
+              <a href="#" class="dark-link">Новая регистрация</a>
+            </div>
           </section>
         </div>
         <div class="header-cart-container user-button-container">
-          <button type="button" class="user-button user-cart-button">Корзина</button>
+          <button type="button" class="user-button user-cart-button">2 товара</button>
           <!-- Попап корзины -->
           <section class="popup cart-popup">
-            <h2 class="cart-header">Cодержимое корзины</h2>
+            <h2 class="cart-header visualy-hidden">Cодержимое корзины</h2>
             <table class="cart-popup-table">
               <tr class="cart-table-row">
-                  <td class="cart-row-item"><button type="button" class="cart-delete-button">Удалить</button></td>
-                  <td class="cart-row-item"><img class="cart-product-image" src="img/catalog/orange.png" alt="мороженое пломбир с апельсиновым джемом" width="40" height="40"></td>
+                  <td class="cart-product-delete-container cart-row-item"><button type="button" class="cart-product-delete-button">Удалить</button></td>
+                  <td class="cart-product-image-container cart-row-item"><img class="cart-product-image" src="img/catalog/orange.png" alt="мороженое пломбир с апельсиновым джемом" width="40" height="40"></td>
                   <td class="cart-product-title cart-row-item">Пломбир с апельсиновым джемом</td>
                   <td class="cart-product-calculation cart-row-item">1,5кг х <span>200руб.</span></td>
                   <td class="cart-product-price cart-row-item">300 руб.</td>
               </tr>
               <tr class="cart-table-row">
-                  <td class="cart-row-item"><button type="button" class="cart-delete-button">Удалить</button></td>
-                  <td class="cart-row-item"><img class="cart-product-image" src="img/catalog/strawberry.png" alt="мороженое клубничный пломбир с присыпкой из белого шоколада" width="40" height="40"></td>
+                  <td class="cart-product-delete-container cart-row-item"><button type="button" class="cart-product-delete-button">Удалить</button></td>
+                  <td class="cart-product-image-container cart-row-item"><img class="cart-product-image" src="img/catalog/strawberry.png" alt="мороженое клубничный пломбир с присыпкой из белого шоколада" width="40" height="40"></td>
                   <td class="cart-product-title cart-row-item">Клубничный пломбир с присыпкой из белого шоколада</td>
                   <td class="cart-product-calculation cart-row-item">1,5кг х <span>300руб.</span></td>
                   <td class="cart-product-price cart-row-item">450 руб.</td>
               </tr>
-              <tr>
-                  <td colspan="5" class="cart-table-row cart-total-price">Итого: 750 руб.</td>
+              <tr class="cart-table-total-row">
+                  <td colspan="5" class="cart-total-price cart-row-item">Итого: 750 руб.</td>
               </tr>
             </table>
             <a href="#" class="button cart-popup-button">Оформить заказ</a>
@@ -100,7 +102,7 @@
       </div>
       
       <section class="filters container">
-        <h2 class="filters-header">Поиск по фильтрам</h2>
+        <h2 class="filters-header visualy-hidden">Поиск по фильтрам</h2>
         <form action="https://echo.htmlacademy.ru" method="GET" class="filters-form">
         <div class="filters-sorting-container">
           <label for="filters-sorting-field" class="filters-legend">Сортировка:</label>
@@ -111,13 +113,13 @@
             <option value="content-of-a-fat">По жирности</option>
           </select>
         </div>
-        <fieldset class="filters-price">
+        <fieldset class="filters-price filters-fieldset">
           <legend class="filters-legend">Цена: 100₽ - 500₽</legend>
           <input class="filters-price-range" type="range" name="price-range-min" id="min-price-range-field" min="0" max="1000" step="100" value="100">
           <input class="filters-price-range" type="range" name="price-range-max" id="max-price-range-field" min="0" max="1000" step="100" value="500">
         </fieldset>
 
-        <fieldset class="filters-fat-percentage">
+        <fieldset class="filters-fat-percentage filters-fieldset"">
           <legend class="filters-legend">Жирность</legend>
           <ul class="filters-fat-percentage-list">
             <li class="fat-percentage-item">
@@ -139,7 +141,7 @@
           </ul>
         </fieldset>
             
-        <fieldset class="filters-fillers">
+        <fieldset class="filters-fillers filters-fieldset">
           <legend class="filters-legend">Наполнители</legend>
           <ul class="filters-fillers-list">
             <li class="filters-fillers-item">
@@ -168,7 +170,7 @@
       </form>
       </section>
       <section class="catalog-products container">
-          <h2 class="products-header">Список сливочного мороженого</h2>
+          <h2 class="products-header visualy-hidden">Список сливочного мороженого</h2>
           <ul class="product-list inner-product-list">
             <li class="product-item inner-product-item">
               <img class="product-item-image" src="img/catalog/orange.png" width="267" height="267" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой">
@@ -259,14 +261,14 @@
     </main>
     <footer class="main-footer container">      
       <div class="socials-container">
-        <h2 class="footer-header">Наши социальные сети</h2>
+        <h2 class="footer-header visualy-hidden">Наши социальные сети</h2>
         <a href="https://facebook.com" class="facebook-link footer-social-link">Facebook</a>
         <a href="https://vk.com" class="vk-link footer-social-link">Вконтакте</a>
         <a href="https://instagram.com" class="instagram-link footer-social-link">Instagram</a>
         <a href="https://twitter.com" class="twitter-link footer-social-link">Twitter</a>
       </div>
       <div class="useful-links-container">
-        <h2 class="footer-header">Полезные ссылки</h2>
+        <h2 class="footer-header visualy-hidden">Полезные ссылки</h2>
         <a href="#" class="useful-link light-link">Для поставщиков</a>
         <a href="#" class="useful-link light-link">Наши документы</a>
         <a href="#" class="useful-link light-link">О производстве</a>

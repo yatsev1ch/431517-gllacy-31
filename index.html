@@ -43,11 +43,11 @@
           <button type="button" class="user-button user-search-button">Поиск</button>
           <!-- Попап поиска -->
           <section class="popup search-popup">
-            <h2>Поиск</h2>
+            <h2 class="visualy-hidden">Поиск</h2>
             <form action="https://echo.htmlacademy.ru" method="GET" class="general-form search-form">
-              <label for="search-input">Поиск:</label>
-              <input type="search" name="search-field" id="search-input" placeholder="Крем-брюле">
-              <button type="submit">Поиск</button>
+              <label for="search-input" class="visualy-hidden">Поиск:</label>
+              <input class="search-popup-input" type="search" name="search-field" id="search-input" placeholder="Крем-брюле">
+              <button type="submit" class="visualy-hidden">Поиск</button>
             </form>
           </section>
         </div>
@@ -55,16 +55,18 @@
           <button type="button" class="user-button user-login-button">Вход</button>
           <!-- Попап входа -->
           <section class="popup login-popup">
-            <h2>Вход</h2>
+            <h2 class="visualy-hidden">Вход</h2>
             <form action="https://echo.htmlacademy.ru" method="post" class="general-form login-form">
-              <label for="login-email-input">Email:</label>
-              <input type="email" placeholder="email@example.com" name="login-email" id="login-email-input">
-              <label for="login-password-input">Пароль:</label>
-              <input type="password" placeholder="•••••" name="login-password" id="login-password-input">
+              <label class="visualy-hidden" for="login-email-input">Email:</label>
+              <input class="login-popup-input" type="email" placeholder="email@example.com" name="login-email" id="login-email-input">
+              <label class="visualy-hidden" for="login-password-input">Пароль:</label>
+              <input class="login-popup-input" type="password" placeholder="•••••" name="login-password" id="login-password-input">
               <button type="submit" class="button login-popup-button">Войти</button>
             </form>
-            <a href="#" class="dark-link">Забыли пароль?</a>
-            <a href="#" class="dark-link">Новая регистрация</a>
+            <div class="login-popup-links-container">
+              <a href="#" class="dark-link forget-password-link">Забыли пароль?</a>
+              <a href="#" class="dark-link">Новая регистрация</a>
+            </div>
           </section>
         </div>
         <div class="header-cart-container user-button-container">
@@ -76,9 +78,9 @@
       </p>
     </header>
     <main class="main-container">
-      <h1 class="main-page-header">Магазин мороженого Глейси</h1>
+      <h1 class="main-page-header visualy-hidden">Магазин мороженого Глейси</h1>
       <section class="offers container">
-        <h2 class="offers-header">Холодные предложения</h2>
+        <h2 class="offers-header visualy-hidden">Холодные предложения</h2>
         <ul class="offer-list">
           <li class="offer-item">
             <h3 class="offer-item-header">Пломбир с помадкой и клубничный щербет</h3>
@@ -103,7 +105,7 @@
         </div>
       </section>
       <section class="promo container">
-        <h2 class="promo-header">Акции</h2>
+        <h2 class="promo-header visualy-hidden">Акции</h2>
         <ul class="promo-list">
           <li class="promo-item">
             <h3 class="promo-item-header">Малинка даром!</h3>
@@ -118,7 +120,7 @@
         </ul>
       </section>
       <section class="popular-products container">
-        <h2 class="popular-products-header">Популярные товары</h2>
+        <h2 class="popular-products-header visualy-hidden">Популярные товары</h2>
         <ul class="product-list">
           <li class="product-item index-product-item">
             <img class="product-item-image" src="img/catalog/orange.png" width="267" height="267" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой">
@@ -148,7 +150,7 @@
       </section>
       <div class="about-wrapper container">
         <section class="about">
-          <h2 class="about-header">О нас</h2>
+          <h2 class="about-header visualy-hidden">О нас</h2>
           <p class="about-description">Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</p>
           <ul class="about-list">
             <li class="about-item">
@@ -180,20 +182,20 @@
         </section>
         <section class="subscribtion-container">
           <div class="subscribtion-content">
-            <h2 class="subscribtion-header">Новостная рассылка</h2>
+            <h2 class="subscribtion-header visualy-hidden">Новостная рассылка</h2>
             <p class="subscribtion-description">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе 
               всего самого вкусного, что у нас происходит. Обещаем не спамить и не 
               слать всякой ненужной ерунды. Честно =)</p>
             <form  class="general-form subscribtion-form" method="post" action="https://echo.htmlacademy.ru">
-              <label for="subscribe-email-input">Email:</label>
-              <input type="email" class="subscribtion-email-field" placeholder="email@example.com" name="email-field" id="subscribe-email-input">
+              <label for="subscribe-email-input" class="visualy-hidden">Email:</label>
+              <input type="email" class="subscribtion-input" placeholder="email@example.com" name="email-field" id="subscribe-email-input">
               <button type="submit" class="button subscribtion-button">Отправить</button>
             </form>
           </div>
         </section>
       </div>
       <section class="location">
-        <h2 class="location-header">Где нас найти</h2>
+        <h2 class="location-header visualy-hidden">Где нас найти</h2>
         <iframe class="location-map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8178647642223!2d30.315186951666167!3d59.96834466657506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315bc4e8ce61%3A0xe703c377f3424272!2sStudio%20212!5e0!3m2!1sru!2sby!4v1621712514256!5m2!1sru!2sby" width="600" height="430" allowfullscreen="" loading="lazy"></iframe>
         <div class="location-info">
           <p class="location-info-label location-info-adress-label">Адрес главного офиса и офлайн-магазина:</p>
@@ -210,27 +212,27 @@
       <section class="popup feedback-popup">
         <h2 class="feedback-popup-header">Мы обязательно вам ответим!</h2>
         <button type="button" class="close-button">Закрыть</button>
-        <form action="https://echo.htmlacademy.ru" method="post" class="general-form feedback-form">
-          <label for="feedback-name-input">Имя:</label>
-          <input type="text" placeholder="Имя Фамилия" name="name-field" id="feedback-name-input">
-          <label for="feedback-email-input">Email:</label>
-          <input type="email" placeholder="email@example.com" name="email-field" id="feedback-email-input">
-          <label for="feedback-textarea">Сообщение:</label>
-          <textarea name="textarea-field" id="feedback-textarea" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+        <form action="https://echo.htmlacademy.ru" method="post" class="general-form feedback-popup-form">
+          <label class="visualy-hidden" for="feedback-name-input">Имя:</label>
+          <input class="feedback-popup-input" type="text" placeholder="Имя Фамилия" name="name-field" id="feedback-name-input">
+          <label class="visualy-hidden" for="feedback-email-input">Email:</label>
+          <input class="feedback-popup-input" type="email" placeholder="email@example.com" name="email-field" id="feedback-email-input">
+          <label class="visualy-hidden" for="feedback-textarea">Сообщение:</label>
+          <textarea class="feedback-popup-textarea" name="textarea-field" id="feedback-textarea" cols="30" rows="6" placeholder="В свободной форме"></textarea>
           <button type="submit" class="button feedback-popup-button">Отправить</button>
         </form>
       </section>
     </main>
     <footer class="main-footer container">      
       <div class="socials-container">
-        <h2 class="footer-header">Наши социальные сети</h2>
+        <h2 class="footer-header visualy-hidden">Наши социальные сети</h2>
         <a href="https://facebook.com" class="facebook-link footer-social-link">Facebook</a>
         <a href="https://vk.com" class="vk-link footer-social-link">Вконтакте</a>
         <a href="https://instagram.com" class="instagram-link footer-social-link">Instagram</a>
         <a href="https://twitter.com" class="twitter-link footer-social-link">Twitter</a>
       </div>
       <div class="useful-links-container">
-        <h2 class="footer-header">Полезные ссылки</h2>
+        <h2 class="footer-header visualy-hidden">Полезные ссылки</h2>
         <a href="#" class="useful-link light-link">Для поставщиков</a>
         <a href="#" class="useful-link light-link">Наши документы</a>
         <a href="#" class="useful-link light-link">О производстве</a>
