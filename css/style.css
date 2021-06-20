@@ -83,7 +83,7 @@
     background-color: var(--main-background-1);
     color: var(--black-basic);
     font-size: 16px;
-    font-weight: normal;
+    font-weight: 400;
     line-height: 22px;
     margin: 0;
     padding: 0;
@@ -157,8 +157,10 @@
     border: none;
     color: var(--white-basic);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
     cursor: pointer;
+    border-radius: 70px;
+    text-align: center;
 }
 
 .button:hover,
@@ -177,12 +179,12 @@
     border-radius: 4px;
     color: var(--black-basic);
     background-color: var(--white-basic);
-    font-weight: bold;
+    font-weight: 700;
     outline: none;
 }
 
 .general-form textarea {
-    font-weight: bold;
+    font-weight: 700;
     border-radius: 4px;
     border: 1px solid var(--gray-stroke);
     outline: none;
@@ -191,7 +193,7 @@
 .general-form input::placeholder,
 .general-form textarea::placeholder {
     color: var(--gray-placeholder);
-    font-weight: normal;
+    font-weight: 400;
 }
 
 .general-form input:hover,
@@ -263,11 +265,11 @@
 .main-menu-link {
     display: block;
     line-height: 18px;
-    font-weight: bold;
+    font-weight: 700;
     color: var(--white-basic);
     text-decoration: underline ;
     text-decoration-color: var(--white-opacity);
-    padding: 9px 13px 11px 13px;
+    padding: 7px 13px;
     border-radius: 26px;
 }
 
@@ -360,12 +362,13 @@
 
 .submenu-bolded-item .submenu-link {
     line-height: 18px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /* Контейнеры кнопок пользователя */
 .header-buttons-container {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     max-width: 270px;
     justify-self: end;
@@ -378,25 +381,14 @@
     position: relative;
 }
 
-.user-button-container:last-child {
+.user-button-container:nth-child(3n) {
     margin-right: 0;
-}
-
-
-.header-search-container {
-    /* order: 2; */
-    /* margin-left: 0; */
-    /* position: relative; */
 }
 
 .header-search-container:hover .search-popup {
     display: block;
 }
 
-.header-login-container {
-    /* order: 1; */
-    /* position: relative; */
-}
 
 .header-login-container:hover .login-popup {
     display: block;
@@ -431,7 +423,7 @@
     text-align: right;
     grid-column: 2 / 3;
     color: var(--white-basic);
-    font-weight: bold;
+    font-weight: 700;
     font-size: 14px;
     line-height: 16px;
 }
@@ -654,7 +646,7 @@
 .cart-total-price {
     font-size: 15px;
     line-height: 16px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .cart-popup-button {
@@ -732,7 +724,6 @@
     font-size: 18px;
     line-height: 24px;
     padding: 14px 24px;
-    border-radius: 70px;
     margin-left: auto;
 }
 
@@ -761,6 +752,11 @@
     display: none;
 } 
 
+.offers {
+    position: relative;
+    margin-bottom: 40px;
+}
+
 .offer-list {
     padding: 0;
     margin: 0;
@@ -768,20 +764,21 @@
 
 /* Индикатор слайдера */
 .offers-indicators { 
-    margin: 0;
-    padding: 0;
-    position: relative;
-    bottom: 60px;
+    position: absolute;
+    bottom: 16px;
+    left: 27px;
 
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
     align-items: center;
-    max-width: 150px;
+    max-width: 300px;
 }
 
 .offers-indicators-button {
     cursor: pointer;
     margin-right: 8px;
+    margin-bottom: 3px;
 }
 
 .offer-item {
@@ -789,25 +786,19 @@
     box-sizing: border-box;
     text-align: center;
     padding-top: 314px;
-    padding-bottom: 20px;
 }
 
 .offer-item-header {
-    display: block;
     max-width: 670px;
     font-size: 60px;
     line-height: 60px;
     color: var(--white-basic);
-    font-weight: bold;
+    font-weight: 700;
     padding: 0;
     margin: 0;
     margin-left: auto;
     margin-right: auto;
-    
     margin-bottom: 26px;
-    z-index: 1;
-
-
 }
 
 .offer-item-button {
@@ -815,8 +806,6 @@
     font-size: 32px;
     line-height: 44px;
     padding: 9px 23px;
-    border-radius: 30px;
-    z-index: 1;
     margin: 0px auto;
 }
 
@@ -869,7 +858,7 @@
     color: var(--white-basic);
     font-size: 35px;
     line-height: 41px;
-    font-weight: bold;
+    font-weight: 700;
     margin: 0px 0px 16px 0px;
     padding: 0;
     flex-basis: 100%;
@@ -880,7 +869,7 @@
     color: var(--white-basic);
     font-size: 18px;
     line-height: 22px;
-    font-weight: bold;
+    font-weight: 700;
     margin: 0px 0px 42px 0px;
     padding: 0;
 }
@@ -890,9 +879,6 @@
     font-size: 18px;
     line-height: 24px;
     padding: 15px 22px;
-    text-align: center;
-    margin: 0;
-    border-radius: 70px;
     margin-left: auto;
 }
 
@@ -906,7 +892,7 @@
     padding: 0;
     font-size: 35px;
     line-height: 41px;
-    font-weight: bold;
+    font-weight: 700;
     color: var(--white-basic);
 }
 
@@ -1051,6 +1037,7 @@
 
 
 .product-item-image {
+    display: block;
     z-index: -1;
     margin-bottom: 13px;
 }
@@ -1063,7 +1050,7 @@
     margin: 0;
     font-size: 45px;
     line-height: 45px;
-    font-weight: bold;
+    font-weight: 700;
     color: var(--white-basic);
 }
 
@@ -1099,7 +1086,6 @@
     flex-shrink: 0;
     margin: 0;
     padding: 0;
-    /* align-items: center; */
 }
 
 .page-numbers-prev {
@@ -1227,7 +1213,7 @@
     display: inline-block;
     font-size: 24px;
     line-height: 30px;
-    font-weight: bold;
+    font-weight: 700;
     text-decoration-color: var(--black-stroke-dark);
     text-decoration-thickness: 2px;
     max-width: 290px;
@@ -1276,7 +1262,6 @@
     font-size: 18px;
     line-height: 24px;
     padding: 14px 19px;
-    border-radius: 70px;
 }
 
 /* Местоположение */
@@ -1331,7 +1316,7 @@
 .location-info-phone {
     font-size: 18px;
     line-height: 24px;
-    font-weight: bold;
+    font-weight: 700;
     color: var(--black-basic);
     text-decoration: none;
     max-width: 180px;
@@ -1342,6 +1327,7 @@
 }
 
 .location-info-phone {
+    display: block;
     margin: 0px 0px 8px 0px;
 }
 
@@ -1350,8 +1336,6 @@
     font-size: 18px;
     line-height: 24px;
     padding: 13px 28px;
-    border-radius: 70px;
-    margin: 0;
 }
 
 
@@ -1374,6 +1358,7 @@
     display: block;
     box-sizing: border-box;
     margin-right: 8px;
+    margin-bottom: 3px;
     font-size: 0;
     background-repeat: no-repeat;
     height: 36px;
@@ -1419,9 +1404,6 @@
     margin-bottom: 5px;
 }
 
-.useful-link:nth-child(2n+1) {
-    /* flex-basis: 50%; */
-}
 
 
 .footer-credentials {
