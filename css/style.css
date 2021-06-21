@@ -746,11 +746,13 @@
 
 
 /* Предложения */
-
-/* Временно скрыл лишние */
- .offer-item:not(:first-child) {
+.offer-item {
     display: none;
 } 
+
+.current-offer {
+    display: block;
+}
 
 .offers {
     position: relative;
