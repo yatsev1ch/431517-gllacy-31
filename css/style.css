@@ -234,7 +234,7 @@
 .main-header {
     display: grid;
     grid-template-columns: 1fr 280px;
-    margin-bottom: -40px;
+    margin-bottom: -25px;
     padding-top: 9px;
 }
 
@@ -403,6 +403,7 @@
 
 .user-button-container {
     margin-right: 10px;
+    margin-bottom: 20px;
     display: block;
     position: relative;
 }
@@ -1442,7 +1443,7 @@
 .location {
     display: grid;
     grid-template-columns: 1fr 1200px 1fr;
-    margin-bottom: 40px;
+    margin-bottom: 11px;
 }
 
 .location-map-frame {
