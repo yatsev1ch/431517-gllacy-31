@@ -294,7 +294,7 @@
     color: var(--white-basic);
     text-decoration: underline ;
     text-decoration-color: var(--white-opacity);
-    padding: 7px 13px;
+    padding: 6px 13px 8px 13px;
     border-radius: 26px;
 }
 
