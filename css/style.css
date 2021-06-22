@@ -956,7 +956,7 @@
 
 .promo-item {
     background-size: cover;
-    border-radius: 26px;
+    border-radius: 16px;
     padding: 16px 22px 22px 16px;
     display: flex;
     align-items: flex-start;
@@ -1315,7 +1315,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 26px;
-    grid-row-gap: 33px;
+    grid-row-gap: 19px;
     margin: 0;
     padding: 0;
 }
