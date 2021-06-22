@@ -234,7 +234,7 @@
 .main-header {
     display: grid;
     grid-template-columns: 1fr 280px;
-    margin-bottom: -25px;
+    margin-bottom: -41px;
     padding-top: 9px;
 }
 
