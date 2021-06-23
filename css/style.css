@@ -830,13 +830,6 @@
 
 
 /* Предложения */
-.offer-item {
-    display: none;
-} 
-
-.current-offer {
-    display: block;
-}
 
 .offers {
     position: relative;
@@ -907,6 +900,17 @@
     box-sizing: border-box;
     text-align: center;
     padding-top: 314px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.offer-item {
+    display: none;
+} 
+
+.current-offer {
+    display: flex;
+    flex-direction: column;
 }
 
 .offer-item-header {
@@ -916,18 +920,15 @@
     color: var(--white-basic);
     font-weight: 700;
     padding: 0;
-    margin: 0;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 26px;
+    margin: 0px auto 26px auto;
 }
 
 .offer-item-button {
-    max-width: 200px;
     font-size: 32px;
     line-height: 44px;
     padding: 9px 23px;
     margin: 0px auto;
+    letter-spacing: 2px;
 }
 
 .offer-item-image {
