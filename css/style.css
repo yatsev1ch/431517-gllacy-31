@@ -857,7 +857,6 @@
 .offers-indicators-button {
     display: block;
     box-sizing: border-box;
-    position: relative;
     cursor: pointer;
     height: 21px;
     width: 21px;
@@ -870,27 +869,22 @@
     padding: 0;
 }
 
-.offers-indicators-button::before {
-    content: "";
-    position: absolute;
-    display: none;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 18px;
-    background-color: transparent;
+.current-offer-indicator {
+    cursor: default;
 }
 
-.offers-indicators-button:hover::before,
-.offers-indicators-button:focus::before {
-    display: block;
+.offers-indicators-button:hover,
+.offers-indicators-button:focus {
     background-color: var(--white-indicator);
 }
 
-.offers-indicators-button:active::before, 
+.offers-indicators-button:active, 
 .current-offer-indicator {
-    display: block;
+    background-color: var(--white-basic);
+
+}
+
+.current-offer-indicator:hover {
     background-color: var(--white-basic);
 }
 
