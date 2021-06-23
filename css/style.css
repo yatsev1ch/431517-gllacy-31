@@ -1310,10 +1310,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 26px;
-    grid-row-gap: 19px;
+    grid-row-gap: 15px;
     margin: 0;
     padding: 0;
 }
+
+
 
 
 .about-item:nth-child(3) {
@@ -1324,7 +1326,7 @@
 .about-item-description {
     margin: 0;
     padding: 0;
-    padding-top: 14px;
+    padding-top: 12px;
     display: flex;
 }
 
@@ -1332,7 +1334,7 @@
     display: block;
     flex-shrink: 0;
     margin-right: 6px;
-    margin-top: -14px;
+    margin-top: -12px;
     width: 49px;
     height: 49px;
 }
