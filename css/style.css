@@ -604,13 +604,13 @@
 .login-popup-button {
     font-size: 18px;
     line-height: 16px;
-    padding: 15px 26px;
+    padding: 14px 26px;
     border-radius: 26px;
 }
 
 .login-popup-links-container {
     position: absolute;
-    bottom: 26px;
+    bottom: 25px;
     right: 17px;
 }
 
@@ -994,7 +994,7 @@
     
     font-size: 18px;
     line-height: 24px;
-    padding: 15px 22px;
+    padding: 12px 22px;
     margin-left: auto;
 }
 
@@ -1417,7 +1417,7 @@
 
 .subscribtion-input {
     margin: 0px 10px 0px 0px;
-    padding: 14px;
+    padding: 12px;
     flex-grow: 1;
     border-radius: 6px;
 }
@@ -1431,7 +1431,7 @@
 .subscribtion-button {
     font-size: 18px;
     line-height: 24px;
-    padding: 14px 19px;
+    padding: 10px 19px;
 }
 
 /* Местоположение */
@@ -1505,7 +1505,7 @@
 .location-info-button {
     font-size: 18px;
     line-height: 24px;
-    padding: 13px 28px;
+    padding: 10px 28px;
 }
 
 
