@@ -15,7 +15,7 @@
         <a href="index.html" class="main-header-logo"><img class="main-header-logo-image" src="img/logo.svg" width="154" height="64" alt="логотип магазина Глейси"></a>
         <ul class="main-menu">
           <li class="main-menu-item menu-item-with-submenu">
-            <a href="" class="main-menu-link">Каталог</a>
+            <a href="" class="main-menu-link menu-link-with-submenu">Каталог</a>
             <ul class="submenu">
               <li class="submenu-item submenu-bolded-item"><a href="#" class="submenu-link">Новинки</a></li>
               <li class="submenu-item"><a href="" class="submenu-link">Сливочное</a></li>
@@ -41,7 +41,7 @@
             <form action="https://echo.htmlacademy.ru" method="GET" class="general-form search-form">
               <label for="search-input" class="visualy-hidden">Поиск:</label>
               <input class="search-popup-input" type="search" name="search-field" id="search-input" placeholder="Крем-брюле">
-              <button type="submit" class="visualy-hidden">Поиск</button>
+              <button type="submit" class="visualy-hidden" tabindex="-1">Поиск</button>
             </form>
           </section>
         </div>
@@ -147,19 +147,19 @@
           <legend class="filters-legend">Жирность</legend>
           <ul class="filters-fat-percentage-list">
             <li class="fat-percentage-item">
-              <input class="fat-percentage-radio visualy-hidden" type="radio" value="0%" name="fat-percentage" id="fat-percentage-0">
+              <input class="fat-percentage-radio visualy-hidden" type="radio" value="0%" name="fat-percentage" id="fat-percentage-0" tabindex="-1">
               <label for="fat-percentage-0" class="filters-label filters-radio-label" tabindex="0">0%</label>
             </li>
             <li class="fat-percentage-item">
-              <input class="fat-percentage-radio visualy-hidden" type="radio" value="до 10%" name="fat-percentage" id="fat-percentage-10" disabled checked>
+              <input class="fat-percentage-radio visualy-hidden" type="radio" value="до 10%" name="fat-percentage" id="fat-percentage-10" tabindex="-1" checked>
               <label for="fat-percentage-10" class="filters-label filters-radio-label" tabindex="0">10%</label>
             </li>
             <li class="fat-percentage-item">
-              <input class="fat-percentage-radio visualy-hidden" type="radio" value="до 30%" name="fat-percentage" id="fat-percentage-30">
+              <input class="fat-percentage-radio visualy-hidden" type="radio" value="до 30%" name="fat-percentage" id="fat-percentage-30" tabindex="-1">
               <label for="fat-percentage-30" class="filters-label filters-radio-label" tabindex="0">30%</label>
             </li>
             <li class="fat-percentage-item">
-              <input class="fat-percentage-radio visualy-hidden" type="radio" value="выше 30%" name="fat-percentage" id="fat-percentage-40">
+              <input class="fat-percentage-radio visualy-hidden" type="radio" value="выше 30%" name="fat-percentage" id="fat-percentage-40" tabindex="-1">
               <label for="fat-percentage-40" class="filters-label filters-radio-label" tabindex="0">выше 30%</label>
             </li>
           </ul>
@@ -169,24 +169,24 @@
           <legend class="filters-legend">Наполнители</legend>
           <ul class="filters-fillers-list">
             <li class="filters-fillers-item">
-              <input class="visualy-hidden" type="checkbox" name="with-chocolate" id="with-chocolate-checkbox" checked>
-              <label for="with-chocolate-checkbox" class="filters-label filters-checkbox-label">шоколадные</label>
+              <input class="fillers-checkbox visualy-hidden" type="checkbox" name="with-chocolate" id="with-chocolate-checkbox" checked>
+              <label for="with-chocolate-checkbox" class="filters-label filters-checkbox-label" tabindex="0">шоколадные</label>
             </li>
             <li class="filters-fillers-item">
-              <input class="visualy-hidden" type="checkbox" name="with-shugar" id="with-shugar-checkbox" checked>
-              <label for="with-shugar-checkbox" class="filters-label filters-checkbox-label">сахарные присыпки</label>
+              <input class="fillers-checkbox visualy-hidden" type="checkbox" name="with-shugar" id="with-shugar-checkbox" checked>
+              <label for="with-shugar-checkbox" class="filters-label filters-checkbox-label" tabindex="0">сахарные присыпки</label>
             </li>
             <li class="filters-fillers-item">
-              <input class="visualy-hidden" type="checkbox" name="with-fruits" id="with-fruits-checkbox">
-              <label for="with-fruits-checkbox" class="filters-label filters-checkbox-label">фрукты</label>
+              <input class="fillers-checkbox visualy-hidden" type="checkbox" name="with-fruits" id="with-fruits-checkbox">
+              <label for="with-fruits-checkbox" class="filters-label filters-checkbox-label" tabindex="0">фрукты</label>
             </li>
             <li class="filters-fillers-item">
-              <input class="visualy-hidden" type="checkbox" name="with-syrope" id="with-syrope-checkbox">
-              <label for="with-syrope-checkbox" class="filters-label filters-checkbox-label">сиропы</label>
+              <input class="fillers-checkbox visualy-hidden" type="checkbox" name="with-syrope" id="with-syrope-checkbox">
+              <label for="with-syrope-checkbox" class="filters-label filters-checkbox-label" tabindex="0">сиропы</label>
             </li>
             <li class="filters-fillers-item">
-              <input class="visualy-hidden" type="checkbox" name="with-jam" id="with-jam-checkbox">
-              <label for="with-jam-checkbox" class="filters-label filters-checkbox-label">джемы</label>
+              <input class="fillers-checkbox visualy-hidden" type="checkbox" name="with-jam" id="with-jam-checkbox">
+              <label for="with-jam-checkbox" class="filters-label filters-checkbox-label" tabindex="0">джемы</label>
             </li>
           </ul>
         </fieldset>
