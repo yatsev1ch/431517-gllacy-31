@@ -342,6 +342,7 @@
     text-decoration: none;
     margin: 0;
     padding: 0;
+    box-shadow: var(--modal-shadow);
 }
 
 .submenu::before {
@@ -1313,6 +1314,9 @@
 .filters-button:active {
     color: var(--black-basic);
     background-color: var(--white-basic);
+    box-shadow: var(--menu-link-active-shadow);
+    border: none;
+    padding: 9px 31px;
 }
 
 /* Товары */
@@ -1413,12 +1417,13 @@
 
 .page-numbers-prev {
     font-size: 0;
-    background-image: url(../img/icons/prev-page-icon.svg);
+    background-image: url(../img/icons/page-switch-icon.svg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     border-radius: 50%;
     height: 26px;
     width: 26px;
+    transform: rotateY(180deg);
 }
 
 .page-number-item {
@@ -1443,7 +1448,7 @@
 .page-numbers-next {
     font-size: 0;
     margin: 0;
-    background-image: url(../img/icons/next-page-icon.svg);
+    background-image: url(../img/icons/page-switch-icon.svg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     border-radius: 50%;
@@ -1452,10 +1457,20 @@
 }
 
 .page-number:hover,
-.page-number:focus,
-.page-numbers-next:hover {
+.page-number:focus {
     background-color: var(--white-opacity-20);
 }
+
+.page-numbers-prev[href=""],
+.page-numbers-next[href=""],
+.page-numbers-prev[href=""]:hover,
+.page-numbers-next[href=""]:hover,
+.page-numbers-prev[href=""]:focus,
+.page-numbers-next[href=""]:focus {
+    opacity: 0.2;
+    background-color: transparent;
+    cursor: default;
+} 
 
 .page-number:active,
 .page-number[href=""] {
