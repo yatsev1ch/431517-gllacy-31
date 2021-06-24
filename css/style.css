@@ -868,6 +868,7 @@
     flex-wrap: wrap;
     align-items: center;
     max-width: 300px;
+    z-index: 1;
 }
 
 .offers-indicators-button {
