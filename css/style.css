@@ -1293,6 +1293,7 @@
 }
 
 .filters-checkbox-label::before {
+    display: block;
     position: absolute;
     content: url(../img/icons/checkbox-unchecked-icon.svg);
     height: 22px;
