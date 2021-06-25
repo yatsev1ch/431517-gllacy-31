@@ -58,6 +58,7 @@
     --blue-focus: rgba(46,136,228,0.52);
     --raspberry: rgb(162, 24, 61);
     --chocolate: rgb(79, 43, 22);
+    --waffel-background: #E5D3AA;
 
     /* Градиенты */
     --orange-button-basic-gradient: linear-gradient(to bottom, #F26843, #E74A35);
@@ -135,38 +136,38 @@
 }
 
 /* Тёмные ссылки */
-.page-body .dark-link {
+.dark-link {
     color: var(--black-basic);
     text-decoration: underline;
     text-decoration-color: var(--black-stroke);
 }
 
-.page-body .dark-link:hover, 
-.page-body .dark-link:focus,
-.page-body .dark-link:active {
+.dark-link:hover, 
+.dark-link:focus,
+.dark-link:active {
     color: var(--orange-link-dark);
     text-decoration-color: var(--orange-link-dark-opacity);
 }
 
 
 /* Светлые ссылки */
-.page-body .light-link {
+.light-link {
     color: var(--white-basic);
     text-decoration: underline;
     text-decoration-color: var(--white-opacity-30);
 }
 
-.page-body .light-link:hover, 
-.page-body .light-link:focus,
-.page-body .light-link:active {
+.light-link:hover, 
+.light-link:focus,
+.light-link:active {
     color: var(--orange-link-light);
     text-decoration-color: var(--orange-link-light-opacity);
 }
 
-.page-body .light-link[href=""],
-.page-body .light-link[href=""]:hover, 
-.page-body .light-link[href=""]:focus,
-.page-body .light-link[href=""]:active {
+.light-link[href=""],
+.light-link[href=""]:hover, 
+.light-link[href=""]:focus,
+.light-link[href=""]:active {
     text-decoration: none;
     color: var(--white-basic);
     cursor: default;
@@ -201,7 +202,7 @@
 }
 
 /* Поля формы */
-.general-form input {
+.form-input {
     display: block;
     border: 1px solid var(--gray-stroke);
     border-radius: 4px;
@@ -211,28 +212,30 @@
     outline: none;
 }
 
-.general-form textarea {
+.form-textarea {
     font-weight: 700;
     border-radius: 4px;
     border: 1px solid var(--gray-stroke);
     outline: none;
 }
 
-.general-form input::placeholder,
-.general-form textarea::placeholder {
+.form-input::placeholder,
+.form-textarea::placeholder {
     color: var(--gray-placeholder);
     font-weight: 400;
 }
 
-.general-form input:hover,
-.general-form textarea:hover {
+.form-input:hover,
+.form-textarea:hover {
     border-width: 2px;
 }
 
-.general-form input:focus,
-.general-form textarea:focus {
+.form-input:focus,
+.form-textarea:focus {
     border: 2px solid var(--blue-focus);
 }
+
+/* Шапка сайта */
 
 .main-header {
     display: grid;
@@ -293,11 +296,6 @@
     display: block;
 }
 
-
-
-
-
-
 .main-menu-link {
     display: block;
     line-height: 18px;
@@ -319,7 +317,6 @@
     color: var(--black-basic);
     text-decoration: none;
 }
-
 
 
 .main-menu-link:active {
@@ -360,8 +357,6 @@
     background-color: transparent;
 
 }
-
-
 
 
 .submenu-link {
@@ -778,8 +773,8 @@
 /* Попап обратной связи */
 .feedback-popup {
     display: none;
-    position: absolute;
-    top: 30%;
+    position: fixed;
+    top: 20%;
     left: 0;
     right: 0;
     margin: 0px auto;
@@ -806,7 +801,7 @@
 }
 
 .feedback-popup-input {
-    padding: 16px 14px;
+    padding: 12px 14px;
     margin-bottom: 20px;
     margin-right: auto;
     width: 267px;
@@ -820,7 +815,7 @@
 
 .feedback-popup-textarea {
     display: block;
-    padding: 16px 14px;
+    padding: 12px 14px;
     flex-basis: 100%;
     margin-bottom: 25px;
 }
@@ -1135,6 +1130,7 @@
     color: var(--white-basic);
     appearance: none;
     -webkit-appearance: none;
+    cursor: pointer;
 }
 
 .filters-sorting-select-wrapper {
@@ -1213,6 +1209,7 @@
 
 .filters-radio-label {
     padding-left: 33px;
+    cursor: pointer;
 }
 
 .filters-radio-label::before {
@@ -1279,6 +1276,7 @@
 
 .filters-checkbox-label {
     padding-left: 32px;
+    cursor: pointer;
 }
 
 .filters-checkbox-label::before {
@@ -1534,6 +1532,7 @@
 
 .about {
     background-image: url(../img/waffle-pattern.png);
+    background-color: var(--waffel-background);
     background-repeat: repeat;
     padding: 24px 20px;
     border-radius: 16px;
@@ -1764,8 +1763,9 @@
     padding-bottom: 26px;
 }
 
-.socials-container {
+.social-links-container {
     justify-self: start;
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
 }  
@@ -1799,7 +1799,7 @@
 .useful-links-container {
     justify-self: center;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     align-content: center;
     flex-wrap: wrap;
 }
