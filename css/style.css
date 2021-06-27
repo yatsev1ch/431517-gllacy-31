@@ -793,6 +793,10 @@
     padding: 20px 25px 27px 23px;
 }
 
+.popup-showed {
+    display: block;
+}
+
 .feedback-popup-form {
     display: flex;
     margin: 0;
@@ -845,6 +849,7 @@
 
 .feedback-close-button  {
     position: absolute;
+    display: block;
     top: 15px;
     right: 16px;
     height: 17px;
@@ -1494,6 +1499,7 @@
     z-index: 1;
     box-shadow: var(--product-item-shadow);
     border-radius: 4px;
+    cursor: pointer;
 }
 
 
@@ -1679,12 +1685,11 @@
     padding: 0;
 }
 
-.blog-post .dark-link {
-    display: inline-block;
+.blog-post-link {
+    display: block;
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;
-    text-decoration-color: var(--black-stroke-dark);
     text-decoration-thickness: 2px;
     max-width: 290px;
 }
@@ -1749,6 +1754,8 @@
     z-index: -1;
     border: none;
     background-color: var(--gray-placeholder);
+    background-image: url(../img/map-background.png);
+    background-size: cover;
 }
 
 .location-info {

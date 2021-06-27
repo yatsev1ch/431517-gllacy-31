@@ -1,7 +1,6 @@
-const products = document.querySelectorAll('.product-item');  
+const products = document.querySelectorAll(".product-item");  
 Array.prototype.forEach.call(products, product => {  
-    let down, up, link = product.querySelector('h3 a');
-    product.style.cursor = 'pointer';
+    let down, up, link = product.querySelector("h3 a");
     product.onmousedown = () => down = +new Date();
     product.onmouseup = () => {
         up = +new Date();
@@ -11,16 +10,21 @@ Array.prototype.forEach.call(products, product => {
     }
 });
 
-const feedbackPopup = document.getElementsByClassName("feedback-popup")[0];
-const openBtn = document.getElementsByClassName("location-feedback-button")[0];
-const closeBtn = document.getElementsByClassName("feedback-close-button")[0];
+const feedbackPopup = document.querySelector(".feedback-popup");
+const openBtn = document.querySelector(".location-feedback-button");
+const closeBtn = document.querySelector(".feedback-close-button");
 
-openBtn.onclick = function() {
-    feedbackPopup.style.display = "block";
-}
+openBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    feedbackPopup.classList.add("popup-showed");
+});
+
+
+closeBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    feedbackPopup.classList.remove("popup-showed");
+});
   
-closeBtn.onclick = function() {
-    feedbackPopup.style.display = "none";
-}
+
 
 
