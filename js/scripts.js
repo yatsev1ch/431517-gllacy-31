@@ -11,3 +11,16 @@ Array.prototype.forEach.call(products, product => {
     }
 });
 
+const feedbackPopup = document.getElementsByClassName("feedback-popup")[0];
+const openBtn = document.getElementsByClassName("location-feedback-button")[0];
+const closeBtn = document.getElementsByClassName("feedback-close-button")[0];
+
+openBtn.onclick = function() {
+    feedbackPopup.style.display = "block";
+}
+  
+closeBtn.onclick = function() {
+    feedbackPopup.style.display = "none";
+}
+
+
