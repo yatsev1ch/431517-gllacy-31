@@ -12,7 +12,7 @@ Array.prototype.forEach.call(products, product => {
 
 const feedbackPopup = document.querySelector(".feedback-popup");
 const openBtn = document.querySelector(".location-feedback-button");
-const closeBtn = document.querySelector(".feedback-close-button");
+const closeBtn = feedbackPopup.querySelector(".feedback-close-button");
 
 openBtn.addEventListener("click", (event) => {
     event.preventDefault();
@@ -21,9 +21,9 @@ openBtn.addEventListener("click", (event) => {
 
 
 closeBtn.addEventListener("click", (event) => {
-    event.preventDefault();
     feedbackPopup.classList.remove("popup-showed");
 });
+
   
 
 
