@@ -892,6 +892,7 @@
 .feedback-close-button  {
     position: absolute;
     display: block;
+    font-size: 0;
     top: 15px;
     right: 16px;
     height: 17px;
