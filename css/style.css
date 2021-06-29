@@ -1735,6 +1735,7 @@
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;
+    text-decoration-color: var(--black-basic);
     text-decoration-thickness: 2px;
     max-width: 290px;
 }
