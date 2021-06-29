@@ -829,6 +829,7 @@
     display: block;
     animation: popup-show;
     animation-duration: 0.2s;
+    animation-fill-mode: forwards;
 }
 
 .popup-error {
@@ -899,6 +900,7 @@
     width: 18px;
     background-image: url(../img/icons/popup-close-icon.svg);
     background-position: 0 0;
+    background-size: contain;
     background-repeat: no-repeat;
     background-color: transparent;
     color: transparent;
