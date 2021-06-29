@@ -28,6 +28,7 @@ const setFeedbackFormFocus = function() {
     }
 }
 
+
 openBtn.addEventListener("click", (evt) => {
     evt.preventDefault();
     feedbackPopup.classList.add("popup-showed");
@@ -38,8 +39,9 @@ feedbackForm.addEventListener("submit", (evt) => {
     if (!nameField.value || !emailField.value) {
         evt.preventDefault();
         feedbackPopup.classList.remove("popup-error");
-        void feedbackPopup.offsetWidth;
-        feedbackPopup.classList.add("popup-error");
+        window.requestAnimationFrame( () => {
+            feedbackPopup.classList.add("popup-error");
+        });
         setFeedbackFormFocus();
     }
 });
