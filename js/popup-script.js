@@ -1,24 +1,9 @@
-const products = document.querySelectorAll(".product-item");  
-Array.prototype.forEach.call(products, product => {  
-    let link = product.querySelector("h3 a");
-    let productButton = product.querySelector(".product-item-button");
-    product.addEventListener("mouseup", (evt) => {
-        if (evt.target === productButton) {
-            productButton.click();
-        } else {
-            link.click();
-            evt.target.blur();
-            product.blur();
-        }
-    });
-});
-
-const feedbackPopup = document.querySelector(".feedback-popup");
 const openBtn = document.querySelector(".location-feedback-button");
+const feedbackPopup = document.querySelector(".feedback-popup");
 const closeBtn = feedbackPopup.querySelector(".feedback-close-button");
-const feedbackForm = feedbackPopup.querySelector(".feedback-popup-form")
+const feedbackForm = feedbackPopup.querySelector(".feedback-popup-form");
 const nameField = feedbackForm.querySelector(".feedback-popup-name-input");
-const emailField = feedbackForm.querySelector(".feedback-popup-email-input");
+const emailField = feedbackForm.querySelector(".feedback-popup-email-input"); 
 
 const setFeedbackFormFocus = function() {
     if (!nameField.value) {
@@ -27,7 +12,6 @@ const setFeedbackFormFocus = function() {
         emailField.focus();
     }
 }
-
 
 openBtn.addEventListener("click", (evt) => {
     evt.preventDefault();
@@ -58,11 +42,3 @@ document.addEventListener("keydown", (evt) => {
         feedbackPopup.classList.remove("popup-error");
     }
 });
-
-
-
-
-  
-
-
-
